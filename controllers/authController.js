@@ -10,6 +10,7 @@ const signup = async (req, res) => {
         const user = await models.User.create({firstName, lastName, userName, city, password:hash, email, dateOfBirth})
         res.status(201).send({message:"You Registered Successfully."})
     } catch (e) {
+        console.log(e)
         res.status(500).send(e)
     }
 }
