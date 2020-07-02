@@ -29,7 +29,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: new redisStore({ host: 'localhost', port: 6379, client: redisClient.client, ttl: 300 }),
+    store: new redisStore({ host: 'localhost', port: 6379, client: redisClient.client, ttl: 3600 }),
 }));
 
 app.use('/auth', authRouter)
