@@ -1,0 +1,65 @@
+$color_primary: #C63623;
+$color_primary_light: #5e77c1;
+$color_accent: #2A2A2A;
+$color_accent_dark: #262626;
+$color_accent_light: #424242;
+$color_accent_lighter: #f2efef;
+$font_primary: 'Metal Mania', cursive;
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: $color_accent;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+
+}
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.error {
+  .message {
+    color: red;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 0.5em;
+  }
+}
+
+.container-horizontal {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+}
+
+.spinner-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

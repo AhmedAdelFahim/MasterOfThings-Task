@@ -1,0 +1,12 @@
+@import "main";
+
+.info{
+  border-radius: 1em;
+  border: $color_primary solid 0.19em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: $color_accent_light;
+  width: 25%;
+}
