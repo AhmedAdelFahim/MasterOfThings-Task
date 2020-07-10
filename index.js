@@ -29,7 +29,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: new redisStore({ host: 'localhost', port: 6379, client: redisClient.client, ttl: 300 }),
+    store: new redisStore({ host: '0.0.0.0', port: 6379, client: redisClient.client, ttl: 3600 }),
 }));
 
 app.use('/auth', authRouter)
@@ -42,6 +42,12 @@ app.use((req, res, next) => {
     console.log(`new request, its method: ${req.method}`);
     console.log(`the url requested: ${req.url}\n`);
     next();
+});
+
+app.use(express.static('client/build'));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
 });
 
 // Initiating the Server

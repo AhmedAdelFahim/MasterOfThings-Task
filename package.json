@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -r dotenv/config index.js",
-    "test": "env-cmd .env jest"
+    "test": "env-cmd .env jest",
+    "build-client": "cd client && npm install && npm run build"
   },
   "jest": {
     "testEnvironment": "node"
