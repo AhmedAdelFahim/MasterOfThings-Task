@@ -32,3 +32,8 @@
    npx sequelize-cli db:migrate --env=test
    npm test
    ```
+## To Build Docker
+```
+ git checkout development-docker 
+
+```
