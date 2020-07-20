@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const authRouter = require('./routes/auth');
@@ -9,6 +10,8 @@ const redisClient = require('./db/redis')
 const redisStore = require('connect-redis')(session);
 
 const PORT = process.env.PORT || 5000;
+
+console.log(process.env)
 
 const app = express();
 
