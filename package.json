@@ -31,7 +31,7 @@
     "dotenv": "^8.2.0",
     "jest": "^26.1.0",
     "mocha": "^7.1.1",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.20",
     "sequelize-cli": "^6.1.0",
     "supertest": "^4.0.2",
     "env-cmd": "^8.0.2"
